@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>鶴姬重工</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+  <!-- W3 install Start --!>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- W3 install End --!>
+
+
+  <!-- 自訂CSS Start --!>
+
+
+  <!-- 自訂CSS End --!>
+
+
+</head>
+<body style="
+background-image: url(images/AG_BG.png);
+background-repeat: no-repeat;
+background-position: center top;
+background-attachment: fixed">
+
+
+
+<!-- Menu Start --!>
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-light-gray w3-top" style="z-index:3;width:190px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">    <!-- LOLG上方 padding --!>
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <a href="index.html" style="text-decoration:none;"><h2 class=""><b>鶴姬重工</b></h2></a>
+  </div>
+
+
+    <!-- 分類下拉選單 - 角色相關 Start --!>
+      <div class="w3-padding-16 w3-large w3-text-grey" style="font-weight:bold">
+        <a class="w3-bar-item w3-block w3-light-gray"><h4><b>機動戰姬：聚變</b></h4></a>
+
+        <!-- 選單 啟用：<a class="w3-bar-item w3-grey" style="text-decoration:none;"> --!>
+        <!-- 選單 未啟用：<a href="version process.html" class="w3-bar-item w3-button w3-light-grey"> --!>
+        <a class="w3-bar-item w3-grey" style="text-decoration:none;">版本進程</a>
+
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">
+          角色相關 <i class="fa fa-caret-down"></i></a>
+        <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium" style="margin-top: -12px;">
+          <!-- 子選單 Start --!>
+            <!-- 子選單 啟用：<a class="w3-bar-item  w3-gray"style="margin-left: -10px; text-decoration:none;"> --!>
+            <!-- 子選單 未啟用：<a href="#" class="w3-bar-item w3-button"style="margin-left: -10px;"> --!>
+          <a href="char serch list.html" class="w3-bar-item w3-button"style="margin-left: -10px;">角色速查</a>
+          <a href="#" class="w3-bar-item w3-button"style="margin-left: -10px;">建構中</a>
+          <!-- 子選單 End --!>
+        </div>
+
+        <a href="#" class="w3-bar-item w3-button">建構中</a>
+      </div>
+    <!-- 分類下拉選單 - 角色相關 End --!>
+  <br><br><br>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Youtube</a>
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Discord</a>
+</nav>
+
+<!-- Menu End --!>
+
+  <!-- RWD 小視窗 上方LOGO --!>
+  <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+    <div class="w3-bar-item w3-padding-24 w3-wide"><b>鶴姬重工</b></div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </header>
+
+  <!-- 首頁/內頁 Start --!>
+    <div class="w3-main" style="margin-left:190px; height:920px;"> <!-- 內文左測預留 --!>
+
+        <!-- 置頂Logo Start --!>
+      <div class="w3-row">
+        <div class="w3-col" style="width:660px"><img  src="images/Title Logo.png" style="margin-left: 30px;"></div>
+        <div class="w3-rest"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4817244281405314"
+     crossorigin="anonymous"></script></div>
+      </div>
+        <!-- 置頂Logo End --!>
+        <!-- 內文 Start --!>
+          <iframe width="100%" style="height:830px; border:none;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2Yo25-4qqgTaYHRKyrvK4LDr69Ew59z7nAhD5LEQw-tvgIrhVStukA_5_Zri70E5QvuypRy27yiqA/pubhtml?gid=134446803&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <!-- 內文 End --!>
+
+    </div>
+  <!-- 首頁/內頁 End --!>
+
+<script>
+  // 下拉選單JS Code
+  function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+
+  // 導航欄縮放預設開啟
+  document.getElementById("myBtn").click();
+
+  // 導航欄縮放功能
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

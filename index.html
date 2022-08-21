@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>鶴姬重工 遊戲資料庫</title>
-
+  <title>鶴姬重工</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
   <!-- W3 install Start --!>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,11 +20,15 @@
 
 
 </head>
-<body style="background-image: url(images/AG_BG.png);
+<body style="
+background-image: url(images/AG_BG.png);
 background-repeat: no-repeat;
-background-position: center top;">
+background-position: center top;
+background-attachment: fixed">
 
-
+<!-- 子分類Code 備份 --!>
+  <!--<a href="Char_serch_list.html" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right" style="margin-right: 6px; margin-left: -10px;"></i>
+    角色速查</a> --!>
 
   <!-- Menu Start --!>
   <nav class="w3-sidebar w3-bar-block w3-collapse w3-light-gray w3-top" style="z-index:3;width:190px" id="mySidebar">
@@ -32,18 +36,33 @@ background-position: center top;">
       <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
       <a href="index.html" style="text-decoration:none;"><h2 class=""><b>鶴姬重工</b></h2></a>
     </div>
-    <div class="w3-padding-16 w3-large w3-text-grey" style="font-weight:bold">
-      <a class="w3-bar-item w3-block w3-light-gray"><h4><b>機動戰姬：聚變</b></h4></a>
-      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">
-        角色相關 <i class="fa fa-caret-down"></i></a> <!-- 大分類Code --!>
 
-      <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">  <!-- 子分類Code --!>
-        <a href="Char_serch_list.html" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right" style="margin-right: 6px; margin-left: -10px;"></i>
-          角色速查</a>
-        <a href="#" class="w3-bar-item w3-button">建構中</a>
-      </div>
-      <a href="#" class="w3-bar-item w3-button">建構中</a>
-    </div>
+
+
+        <div class="w3-padding-16 w3-large w3-text-grey" style="font-weight:bold">
+          <a class="w3-bar-item w3-block w3-light-gray"><h4><b>機動戰姬：聚變</b></h4></a>
+
+          <!-- 選單 啟用：<a class="w3-bar-item w3-grey" style="text-decoration:none;"> --!>
+          <!-- 選單 未啟用：<a href="version process.html" class="w3-bar-item w3-button w3-light-grey"> --!>
+          <a href="version process.html" class="w3-bar-item w3-button w3-light-grey">版本進程</a>
+
+      <!-- 分類下拉選單 - 角色相關 Start --!>
+          <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">
+            角色相關 <i class="fa fa-caret-down"></i></a>
+          <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium" style="margin-top: -12px;">
+            <!-- 子選單 Start --!>
+              <!-- 子選單 啟用：<a class="w3-bar-item  w3-gray"style="margin-left: -10px; text-decoration:none;"> --!>
+              <!-- 子選單 未啟用：<a href="#" class="w3-bar-item w3-button"style="margin-left: -10px;"> --!>
+            <a href="char serch list.html" class="w3-bar-item w3-button"style="margin-left: -10px;">角色速查</a>
+            <a href="#" class="w3-bar-item w3-button"style="margin-left: -10px;">建構中</a>
+            <!-- 子選單 End --!>
+          </div>
+      <!-- 分類下拉選單 - 角色相關 End --!>
+
+          <a href="#" class="w3-bar-item w3-button">建構中</a>
+        </div>
+
+
     <br><br><br>
     <a href="#footer" class="w3-bar-item w3-button w3-padding">Youtube</a>
     <a href="#footer"  class="w3-bar-item w3-button w3-padding">Discord</a>
@@ -63,21 +82,26 @@ background-position: center top;">
         <!-- 置頂Logo Start --!>
       <div class="w3-row">
         <div class="w3-col" style="width:660px"><img  src="images/Title Logo.png" style="margin-left: 30px;"></div>
-        <div class="w3-rest"><h1><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4817244281405314"
-     crossorigin="anonymous"></script></h1></div>
+        <div class="w3-rest"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4817244281405314"
+     crossorigin="anonymous"></script></div>
       </div>
         <!-- 置頂Logo End --!>
 
         <!-- 內文 Start --!>
           <div class="w3-col w3-center " style="margin-left: 30px; width:1000px;background-image: url(images/white_background.png);">
             <H1>歡迎來到 鶴姬重工 遊戲資料庫</H1>
-            <br>
             <h3>
               近期會將《機動戰姬：聚變》的相關資料，慢慢的移到這個網站<br>
               資料會慢慢地補齊，網站的美化也會持續進行<br>
               希望可以提供給大家更完善的資料查詢環境
             </h3>
           </div>
+
+          <div class="w3-col w3-center" style="margin-left: 30px;margin-top: 30px; max-width:1000px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4817244281405314"
+         crossorigin="anonymous"></script>
+          </div>
+
           <div class="w3-col w3-center " style="margin-left: 30px;margin-top: 30px; max-width:1000px;background-image: url(images/white_background.png);">
             <img  src="images/kagura_index.jpg" style="width:1000px;" class="w3-round">
           </div>
@@ -96,8 +120,19 @@ background-position: center top;">
     }
   }
 
+  function myAccFunc1() {
+    var x = document.getElementById("demoAcc1");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+
+
+
   // 導航欄縮放預設開啟
-  document.getElementById("myBtn").click();
+  document.getElementById("myBtn1").click();
 
   // 導航欄縮放功能
 function w3_open() {
