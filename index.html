@@ -15,8 +15,22 @@
 
   <!-- 自訂CSS Start --!>
 
-
   <!-- 自訂CSS End --!>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+  $(document).ready(function(){
+      $("#hi").hide();
+      $("#menu").load("menupage.html");
+
+  });
+
+
+$.ajaxSetup ({
+cache: false //關閉AJAX相應的緩存
+});
+</script>
 
 
 </head>
@@ -31,42 +45,15 @@ background-attachment: fixed">
     角色速查</a> --!>
 
   <!-- Menu Start --!>
-  <nav class="w3-sidebar w3-bar-block w3-collapse w3-light-gray w3-top" style="z-index:3;width:190px" id="mySidebar">
-    <div class="w3-container w3-display-container w3-padding-16">    <!-- LOLG上方 padding --!>
-      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-      <a href="index.html" style="text-decoration:none;"><h2 class=""><b>鶴姬重工</b></h2></a>
+
+    <div id="hi">
+    <p>hi</p>
+
     </div>
 
-
-
-        <div class="w3-padding-16 w3-large w3-text-grey" style="font-weight:bold">
-          <a class="w3-bar-item w3-block w3-light-gray"><h4><b>機動戰姬：聚變</b></h4></a>
-
-          <!-- 選單 啟用：<a class="w3-bar-item w3-grey" style="text-decoration:none;"> --!>
-          <!-- 選單 未啟用：<a href="version process.html" class="w3-bar-item w3-button w3-light-grey"> --!>
-          <a href="version process.html" class="w3-bar-item w3-button w3-light-grey">版本進程</a>
-
-      <!-- 分類下拉選單 - 角色相關 Start --!>
-          <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">
-            角色相關 <i class="fa fa-caret-down"></i></a>
-          <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium" style="margin-top: -12px;">
-            <!-- 子選單 Start --!>
-              <!-- 子選單 啟用：<a class="w3-bar-item  w3-gray"style="margin-left: -10px; text-decoration:none;"> --!>
-              <!-- 子選單 未啟用：<a href="#" class="w3-bar-item w3-button"style="margin-left: -10px;"> --!>
-            <a href="char serch list.html" class="w3-bar-item w3-button"style="margin-left: -10px;">角色速查</a>
-            <a href="#" class="w3-bar-item w3-button"style="margin-left: -10px;">建構中</a>
-            <!-- 子選單 End --!>
-          </div>
-      <!-- 分類下拉選單 - 角色相關 End --!>
-
-          <a href="#" class="w3-bar-item w3-button">建構中</a>
-        </div>
-
-
-    <br><br><br>
-    <a href="#footer" class="w3-bar-item w3-button w3-padding">Youtube</a>
-    <a href="#footer"  class="w3-bar-item w3-button w3-padding">Discord</a>
-  </nav>
+<div id="menu">
+1
+</div>
 
   <!-- Menu End --!>
 
@@ -110,6 +97,9 @@ background-attachment: fixed">
   <!-- 首頁/內頁 End --!>
 
 <script>
+
+
+
   // 下拉選單JS Code
   function myAccFunc() {
     var x = document.getElementById("demoAcc");
@@ -144,6 +134,7 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
 </script>
 
 </body>
