@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>SideBar</title>
+  <!-- W3 install Start --!>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- W3 install End --!>
+
+
 </head>
 <body>
 
@@ -19,7 +25,7 @@
 
 
         <div class="w3-padding-16 w3-large w3-text-grey" style="font-weight:bold">
-          <a class="w3-bar-item w3-block w3-light-gray"><h4><b>機動戰姬：聚變</b></h4></a>
+          <a class="w3-bar-item w3-block w3-light-gray"><h4><b>機動戰姬：聚變</b></h4></a> <!-- 分類標題 --!>
 
           <!-- 選單 啟用：<a class="w3-bar-item w3-grey" style="text-decoration:none;"> --!>
           <!-- 選單 未啟用：<a href="version process.html" class="w3-bar-item w3-button w3-light-grey"> --!>
@@ -38,17 +44,78 @@
           </div>
       <!-- 分類下拉選單 - 角色相關 End --!>
 
+          <a class="w3-bar-item w3-block w3-light-gray"><h4><b>悠久之樹</b></h4></a>
+          <!-- 分類下拉選單 - 迴響相關 Start --!>
+              <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn1">
+                迴響相關 <i class="fa fa-caret-down"></i></a>
+              <div id="demoAcc1" class="w3-bar-block w3-hide w3-padding-large w3-medium" style="margin-top: -12px;">
+                <!-- 子選單 Start --!>
+                  <!-- 子選單 啟用：<a class="w3-bar-item  w3-gray"style="margin-left: -10px; text-decoration:none;"> --!>
+                  <!-- 子選單 未啟用：<a href="#" class="w3-bar-item w3-button"style="margin-left: -10px;"> --!>
+                <a href="char serch list.html" class="w3-bar-item w3-button"style="margin-left: -10px;">迴響屬性</a>
+                <a href="#" class="w3-bar-item w3-button"style="margin-left: -10px;">迴響配置</a>
+                <!-- 子選單 End --!>
+              </div>
+          <!-- 分類下拉選單 - 角色相關 End --!>
+
+
+
           <a href="#" class="w3-bar-item w3-button">建構中</a>
         </div>
         <p>Menu Version 1.10</p>
+
+
 
     <br><br><br>
     <a href="#footer" class="w3-bar-item w3-button w3-padding">Youtube</a>
     <a href="#footer"  class="w3-bar-item w3-button w3-padding">Discord</a>
   </nav>
-</div>
+
 
   <!-- Menu End --!>
 
+
+
+    <script>
+      // 下拉選單JS Code
+      function myAccFunc() {
+        var x = document.getElementById("demoAcc");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFunc1() {
+        var x = document.getElementById("demoAcc1");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+
+
+      // 導航欄縮放預設開啟
+      document.getElementById("myBtn").click();
+      document.getElementById("myBtn1").click();
+      document.getElementById("myBtn2").click();
+      document.getElementById("myBtn3").click();
+
+      // 導航欄縮放功能
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    </script>
+</div>
 </body>
 </html>
