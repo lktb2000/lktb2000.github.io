@@ -38,7 +38,7 @@
   <nav class="w3-sidebar w3-bar-block w3-collapse w3-light-gray w3-top" style="z-index:3;width:190px" id="mySidebar">
     <div class="w3-container w3-display-container w3-padding-16">    <!-- LOLG上方 padding --!>
       <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-      <a href="index.html" style="text-decoration:none;"><h2 class=""><b>鶴姬重工</b></h2></a>
+      <a href="https://lktb2000.github.io" style="text-decoration:none;"><h2 class=""><b>鶴姬重工</b></h2></a>
     </div>
 
 
@@ -122,6 +122,16 @@
               </div>
           <!-- 分類下拉選單 - 迴響相關 End --!>
 
+          <!-- 分類下拉選單 - 紫微星恆SP Start --!>
+              <a onclick="myAccFuncET2()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtnET2">
+                紫微星恆SP <i class="fa fa-caret-down"></i></a>
+              <div id="demoAccET2" class="w3-bar-block w3-hide w3-padding-large w3-medium" style="margin-top: -12px;">
+                <!-- 子選單 Start --!>
+                  <a href="et3_sp.material.html" class="w3-bar-item w3-button w3-light-gray"style="margin-left: -10px;">材料需求</a>
+                <!-- 子選單 End --!>
+              </div>
+          <!-- 分類下拉選單 - 紫微星恆SP End --!>
+
 
           <a class="w3-bar-item w3-block w3-light-gray"><h4 style="text-shadow:1px 1px 0 #BEBEBE; margin-bottom: 0px; margin-top: 20px; margin-left: -5px;"><b>重裝戰姬</b></h4></a>
           <!-- 分類下拉選單 - 停止更新 Start --!>
@@ -155,7 +165,7 @@
     <a href="https://www.youtube.com/c/LenaElsaStudioR" class="w3-bar-item w3-button w3-padding"><i class="fa-brands fa-youtube" style="margin-right: 5px;"></i>Youtube</a>
     <a href="https://discord.gg/9HGwVST" class="w3-bar-item w3-button w3-padding"><i class="fa-brands fa-discord" style="margin-right: 5px;"></i>Discord</a>
 
-    <p style="margin-left: 14px;">Version 1.113</p>
+    <p style="margin-left: 14px;">Version 1.114</p>
   <!-- InfoBar - 角色相關 End --!>
 
     </nav>
@@ -204,6 +214,15 @@
 
       function myAccFunc4() {
         var x = document.getElementById("demoAcc4");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFuncET2() {
+        var x = document.getElementById("demoAccET2");
         if (x.className.indexOf("w3-show") == -1) {
           x.className += " w3-show";
         } else {
