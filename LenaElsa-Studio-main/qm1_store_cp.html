@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鶴姬重工┃Taiwan Games DataBase</title>
+    <link href="./css/normal.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/master.css.js"></script>
+    <script src="./js/app.js"></script>
+  </head>
+  <body class="bg:fade-90 bg:fade-18@dark">
+    <main>
+      <aside
+        id="menu"
+        class="fixed top:0 left:0 z:999 w:full w:240@sm h:full p:10|10|80 p:10@sm bg:fade-90 bg:fade-18@dark translateY(100%) translateY(0)@sm ~transform|.4s translateY(0).is-open"
+      ></aside>
+
+      <article class="{w:calc(100%-230px);ml:auto}@sm">
+        <header
+          id="header"
+          class="sticky top:0 left:0 z:998 flex gap-x:10 p:10 bg:fade-90 bg:fade-18@dark"
+        ></header>
+
+        <section id="app" class="p:0|10|10">
+          <div
+            class="min-h:calc(100vh-90px) p:20|20|70 p:40@sm bg:fade-88 bg:fade-24@dark r:8"
+          >
+            <div class="grid-cols:3 gap:10">
+              <div class="grid-col-span:3">
+                <h3 class="f:bold f:20 f:white">表格標頭底色</h3>
+                <div class="rel">
+                  <input
+                    class="block w:full h:48 px:20 bg:white r:8 outline:0"
+                    type="text"
+                    v-model="colors.header"
+                  />
+                  <div class="abs top:1/2 right:10 w:30 h:30 translateY(-50%)" :class="`bg:${colors.header}`"></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="f:bold f:20 f:white">SSR 標頭底色</h3>
+                <div class="rel">
+                  <input
+                    class="block w:full h:48 px:20 bg:white r:8 outline:0"
+                    type="text"
+                    v-model="colors.ssrHeader"
+                  />
+                  <div class="abs top:1/2 right:10 w:30 h:30 translateY(-50%)" :class="`bg:${colors.ssrHeader}`"></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="f:bold f:20 f:white">SR 標頭底色</h3>
+                <div class="rel">
+                  <input
+                    class="block w:full h:48 px:20 bg:white r:8 outline:0"
+                    type="text"
+                    v-model="colors.srHeader"
+                  />
+                  <div class="abs top:1/2 right:10 w:30 h:30 translateY(-50%)" :class="`bg:${colors.srHeader}`"></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="f:bold f:20 f:white">R 標頭底色</h3>
+                <div class="rel">
+                  <input
+                    class="block w:full h:48 px:20 bg:white r:8 outline:0"
+                    type="text"
+                    v-model="colors.rHeader"
+                  />
+                  <div class="abs top:1/2 right:10 w:30 h:30 translateY(-50%)" :class="`bg:${colors.rHeader}`"></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="f:bold f:20 f:white">SSR 底色</h3>
+                <div class="rel">
+                  <input
+                    class="block w:full h:48 px:20 bg:white r:8 outline:0"
+                    type="text"
+                    v-model="colors.ssr"
+                  />
+                  <div class="abs top:1/2 right:10 w:30 h:30 translateY(-50%)" :class="`bg:${colors.ssr}`"></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="f:bold f:20 f:white">SR 底色</h3>
+                <div class="rel">
+                  <input
+                    class="block w:full h:48 px:20 bg:white r:8 outline:0"
+                    type="text"
+                    v-model="colors.sr"
+                  />
+                  <div class="abs top:1/2 right:10 w:30 h:30 translateY(-50%)" :class="`bg:${colors.sr}`"></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="f:bold f:20 f:white">R 底色</h3>
+                <div class="rel">
+                  <input
+                    class="block w:full h:48 px:20 bg:white r:8 outline:0"
+                    type="text"
+                    v-model="colors.r"
+                  />
+                  <div class="abs top:1/2 right:10 w:30 h:30 translateY(-50%)" :class="`bg:${colors.r}`"></div>
+                </div>
+              </div>
+            </div>
+            <h2 class="mb:10 f:24 f:32@sm f:fade-42 f:white@dark">儲值比例</h2>
+            <div
+              class="overflow-x:auto {h:4;rounded}::scrollbar {bg:fade-84;rounded}::scrollbar-thumb bg:fade-40::scrollbar-thumb@dark bg:fade-80::scrollbar-thumb:hover bg:fade-48::scrollbar-thumb:hover@dark"
+            >
+              <table
+                class="w:full min-w:900 t:center border-collapse:collapse table-layout:fixed {p:16|10;lh:1.25;b:1|solid|fade-24}_thead_th {p:10;b:1|solid|fade-24}_td"
+                :class="[`bg:${colors.header}_.header`,`bg:${colors.ssr}_.ssr`,`bg:${colors.sr}_.sr`,`bg:${colors.r}_.r`,`bg:${colors.ssrHeader}_.ssr-header`,`bg:${colors.srHeader}_.sr-header`,`bg:${colors.rHeader}_.r-header`]"
+              >
+                <thead>
+                  <tr class="header">
+                    <th>頭像</th>
+                    <th>AG</th>
+                    <th>招募類別</th>
+                    <th>類型</th>
+                    <th>生命</th>
+                    <th>速度</th>
+                    <th>攻擊</th>
+                    <th>防禦</th>
+                    <th>暴擊</th>
+                    <th>暴傷</th>
+                    <th>狀態<br />命中</th>
+                    <th>狀態<br />抵抗</th>
+                    <th>技能1<br />倍率</th>
+                    <th>技能2<br />倍率</th>
+                    <th>技能3<br />倍率</th>
+                    <th>技能TAG</th>
+                    <th>技能TAG</th>
+                    <th>技能TAG</th>
+                    <th>資料鏈</th>
+                    <th>友軍<br />資料鏈</th>
+                    <th>備註</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="ssr">
+                    <td class="ssr-header"></td>
+                    <td class="ssr-header">特斐爾</td>
+                    <td>初始</td>
+                    <td></td>
+                    <td>8507</td>
+                    <td>102</td>
+                    <td>1109</td>
+                    <td>754</td>
+                    <td>12%</td>
+                    <td>150%</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td>159.0%</td>
+                    <td></td>
+                    <td>178.1%</td>
+                    <td>恢復生命</td>
+                    <td>攻擊力疊加</td>
+                    <td>攻擊力上升<br />暈眩</td>
+                    <td>防禦</td>
+                    <td>攻擊</td>
+                    <td></td>
+                  </tr>
+                  <tr class="sr">
+                    <td class="sr-header"></td>
+                    <td class="sr-header">特斐爾</td>
+                    <td>初始</td>
+                    <td></td>
+                    <td>8507</td>
+                    <td>102</td>
+                    <td>1109</td>
+                    <td>754</td>
+                    <td>12%</td>
+                    <td>150%</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td>159.0%</td>
+                    <td></td>
+                    <td>178.1%</td>
+                    <td>恢復生命</td>
+                    <td>攻擊力疊加</td>
+                    <td>攻擊力上升<br />暈眩</td>
+                    <td>防禦</td>
+                    <td>攻擊</td>
+                    <td></td>
+                  </tr>
+                  <tr class="r">
+                    <td class="r-header"></td>
+                    <td class="r-header">特斐爾</td>
+                    <td>初始</td>
+                    <td></td>
+                    <td>8507</td>
+                    <td>102</td>
+                    <td>1109</td>
+                    <td>754</td>
+                    <td>12%</td>
+                    <td>150%</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td>159.0%</td>
+                    <td></td>
+                    <td>178.1%</td>
+                    <td>恢復生命</td>
+                    <td>攻擊力疊加</td>
+                    <td>攻擊力上升<br />暈眩</td>
+                    <td>防禦</td>
+                    <td>攻擊</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <button
+        id="menu-toggle"
+        class="fixed bottom:10 left:1/2 z:1000 flex hide@sm center-content w:180 h:60 px:20 bg:linear-gradient(135deg,#618bfb,#ff56b4) r:8 translateX(-50%) ~width|.4s w:calc(100%-20px).is-active"
+        type="button"
+      >
+        <span class="f:14 f:white .is-active_{hide}">展開選單</span>
+        <span class="hide f:14 f:white .is-active_{block}">關閉選單</span>
+        <div class="rel w:20 h:30 ml:4 .is-active_{ml:auto}">
+          <span
+            class="abs top:-8 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:fade-90 .is-active_{top:0;rotate(45deg)}"
+          ></span>
+          <span
+            class="abs top:0 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:fade-90 .is-active_{opacity:0}"
+          ></span>
+          <span
+            class="abs top:8 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:fade-90 .is-active_{top:0;rotate(-45deg)}"
+          ></span>
+        </div>
+      </button>
+    </main>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            colors: {
+              header:'#ffcf4f',
+              ssr: "#fff2cc",
+              sr: "#d9d2e9",
+              r: "#c9daf8",
+              'ssrHeader':'#ffe599',
+              'srHeader':'#b4a7d6',
+              'rHeader':'#a4c2f4',
+            },
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

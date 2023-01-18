@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鶴姬重工┃Taiwan Games DataBase</title>
+    <link href="./css/normal.css" rel="stylesheet" />
+    <script src="./js/master.css.js"></script>
+    <script src="./js/app.js"></script>
+  </head>
+  <body class="bg:fade-90 bg:fade-18@dark">
+    <main>
+      <aside
+        id="menu"
+        class="fixed top:0 left:0 z:999 w:full w:240@sm h:full p:10|10|80 p:10@sm bg:fade-90 bg:fade-18@dark translateY(100%) translateY(0)@sm ~transform|.4s translateY(0).is-open"
+      ></aside>
+
+      <article class="{w:calc(100%-230px);ml:auto}@sm">
+        <header
+          id="header"
+          class="sticky top:0 left:0 z:998 flex gap-x:10 p:10 bg:fade-90 bg:fade-18@dark"
+        ></header>
+
+        <section class="p:0|10|10">
+          <div
+            class="rel min-h:calc(100vh-90px) overflow:hidden bg:fade-88 bg:fade-24@dark r:8"
+          >
+            <div
+              class="abs inset:0 opacity:0 scale(2.5)|rotate(15deg) ~opacity|1.5s,transform|1.5s .is-loaded_{opacity:1;scale(1)|rotate(0)}"
+            >
+              <img
+                class="abs top:0 left:0 full obj:cover opacity:.75 opacity:.5@dark"
+                src="./img/home/banner.jpg"
+                alt=""
+              />
+              <div
+                class="abs top:0 left:calc(50%-5px) left:calc(25%-5px)@md w:10 h:full bg:fade-90 bg:fade-18@dark transform:top scaleY(0) ~transform|1s .is-loaded_{scaleY(1)}"
+              ></div>
+              <div
+                class="abs top:0 left:calc(50%-5px) hide block@md w:10 h:full bg:fade-90 bg:fade-18@dark transform:bottom scaleY(0) ~transform|1s .is-loaded_{scaleY(1);delay:.2s}"
+              ></div>
+              <div
+                class="abs top:0 left:calc(75%-5px) hide block@md w:10 h:full bg:fade-90 bg:fade-18@dark transform:top scaleY(0) ~transform|1s .is-loaded_{scaleY(1);~delay:.4s}"
+              ></div>
+              <div
+                class="abs bottom:30% left:0 w:50% w:25%@md h:10 bg:fade-90 bg:fade-18@dark transform:left scaleX(0) ~transform|1s .is-loaded_{scaleX(1);~delay:.4s}"
+              ></div>
+              <div
+                class="abs top:30% left:50% left:25%@md w:50% w:25%@md h:10 bg:fade-90 bg:fade-18@dark transform:left scaleX(0) ~transform|1s .is-loaded_{scaleX(1);~delay:.6s}"
+              ></div>
+              <div
+                class="abs bottom:30% left:50% hide block@md w:25% h:10 bg:fade-90 bg:fade-18@dark transform:left scaleX(0) ~transform|1s .is-loaded_{scaleX(1);~delay:.8s}"
+              ></div>
+              <div
+                class="abs top:30% left:75% hide block@md w:25% h:10 bg:fade-90 bg:fade-18@dark transform:left scaleX(0) ~transform|1s .is-loaded_{scaleX(1);~delay:1s}"
+              ></div>
+            </div>
+            <div
+              class="abs inset:0 bg:linear-gradient(to|top,white/.75,transparent) bg:linear-gradient(to|top,fade-18/.75,transparent)@dark"
+            ></div>
+            <div
+              class="abs top:1/2 left:1/2 w:full px:30 px:40@sm mt:-40 opacity:0 translate(-50%,0) ~opacity|1s,transform|1s .is-loaded_{opacity:1;translate(-50%,-50%);~delay:1s}"
+            >
+              <img
+                class="w:240 w:320@sm w:420@md m:0|auto"
+                src="./img/logo/lenaelse-studio-logo-brand.svg"
+                alt="鶴姬重工 LenaElse Studio"
+              />
+              <h2 class="mt:10 f:fade-42 f:white@dark f:20@sm lh:1.75 t:center">
+                專放一些雜七雜八的遊戲資料，希望可以提供給大家更完善的資料查詢環境。
+              </h2>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <button
+        id="menu-toggle"
+        class="fixed bottom:10 left:1/2 z:1000 flex hide@sm center-content w:180 h:60 px:20 bg:linear-gradient(135deg,#618bfb,#ff56b4) r:8 translateX(-50%) ~width|.4s w:calc(100%-20px).is-active"
+        type="button"
+      >
+        <span class="f:14 f:white .is-active_{hide}">展開選單</span>
+        <span class="hide f:14 f:white .is-active_{block}">關閉選單</span>
+        <div class="rel w:20 h:30 ml:4 .is-active_{ml:auto}">
+          <span
+            class="abs top:-8 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:fade-90 .is-active_{top:0;rotate(45deg)}"
+          ></span>
+          <span
+            class="abs top:0 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:fade-90 .is-active_{opacity:0}"
+          ></span>
+          <span
+            class="abs top:8 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:fade-90 .is-active_{top:0;rotate(-45deg)}"
+          ></span>
+        </div>
+      </button>
+    </main>
+  </body>
+</html>
